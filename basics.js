@@ -12,5 +12,13 @@ for (let i = 0; i < blazer.length; i++) {
   console.log(i) //index
 }
 
+// Another way to do this! ^
+
+blazer.forEach((item, index) => {
+  console.log(item) //value
+  console.log(index) //index
+})
+
+
 
 console.log(hektor);
