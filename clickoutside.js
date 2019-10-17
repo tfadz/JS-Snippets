@@ -7,6 +7,21 @@ $('.search-field').click(function(event) {
 
 $(document).on("click", function(event){
  if(!$(event.target).closest(".lang-search__tab").length){
-    $('.search-field').removeClass('extend');
+  $('.search-field').removeClass('extend');
+}
+});
+
+
+
+// Another way to remove class when clicking outside of element
+$searchField.click(function(event) {
+  $(this).addClass('extend');
+  event.stopPropagation();
+});
+
+// Remove class if user clicks outside of element
+$(document).on("click", function(e) {
+  if ($(e.target).is($searchField) === false) {
+    $($searchField).removeClass("extend");
   }
 });
