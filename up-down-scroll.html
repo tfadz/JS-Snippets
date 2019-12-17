@@ -1,0 +1,125 @@
+
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <style>
+          html {
+            box-sizing: border-box;
+          }
+
+          *,
+          *:before,
+          *:after {
+            box-sizing: inherit;
+          }
+          table {
+            margin: 0;
+            padding: 0;
+            border-collapse: collapse;
+          }
+
+          td {
+            display: table-cell;
+            vertical-align: inherit;
+            padding: 1rem 0;
+            background: #eee;
+            border-bottom: 1px solid white;
+          }
+
+          .table-wrapper {
+            height: 250px;
+            overflow: scroll;
+            position: relative;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+          }
+
+
+        </style>
+
+    </head>
+    <body>
+
+      <button class="table-btn up">Up</button>
+      <div class="table-wrapper">
+      <table>
+        <tr>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+        </tr>
+        <tr>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+        </tr>
+        <tr>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+        </tr>
+        <tr>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+        </tr>
+        <tr>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+        </tr>
+        <tr>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+        </tr>
+
+      </table>
+      </div>
+      <button class="table-btn dwn">Down</button>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script>
+   
+      jQuery(function($) {
+        var $table = $('.table-wrapper');
+        if(($table).length > 0 ) {
+          // If table element exists do this..
+
+          $currentScroll = $table.scrollTop();
+          $top = $table.position().top;
+
+          $('.table-btn.up').click(function(event) {
+            event.stopPropagation();
+            $table.animate({
+             scrollTop: $currentScroll - $top
+           }, 300);
+
+          });
+
+          $('.table-btn.dwn').click(function(event) {
+           event.stopPropagation();
+           $table.animate({ scrollTop: "1200px" },300);
+         });
+
+        }
+      });
+
+  
+    </script>
+
+    </body>
+</html>
