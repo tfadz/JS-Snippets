@@ -102,6 +102,7 @@
           $currentScroll = $table.scrollTop();
           $top = $table.position().top;
 
+          // This scrolls all the way up
           $('.table-btn.up').click(function(event) {
             event.stopPropagation();
             $table.animate({
@@ -110,10 +111,25 @@
 
           });
 
+            // This scrolls all the way down
           $('.table-btn.dwn').click(function(event) {
            event.stopPropagation();
            $table.animate({ scrollTop: "1200px" },300);
          });
+
+
+          // If you want the scroll bar to go up and down incrementally do this..
+          // Goes a little to the top
+           $('.table-btn.up').click(function(event) {
+            event.stopPropagation();
+            $table.animate({scrollTop: '-=150px'}, 300);
+          });
+
+           // Goes a little to the bottom
+          $('.table-btn.dwn').click(function(event) {
+             event.stopPropagation();
+             $table.animate({ scrollTop: '+=150px' },300);
+          });
 
         }
       });
