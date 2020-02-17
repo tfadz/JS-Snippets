@@ -1,0 +1,56 @@
+<style>
+.accordion {
+   color: #333;
+   padding: 1rem 0;
+   margin-bottom: 0.5rem;
+   display: flex;
+   line-height: 1;
+   font-size: 1.2rem;
+   position: relative;
+   border-bottom: 1px solid black;
+}
+ .accordion h3 {
+   font-size: 2rem;
+   font-weight: 200;
+   padding: 0;
+}
+ .accordion:hover {
+   cursor: pointer;
+}
+ .accordion:hover h3 {
+   color: orange;
+}
+ .panel {
+   padding: 0.5rem 0;
+   transition: 0.3s ease-in-out;
+   max-height: 0;
+   overflow: hidden;
+   opacity: 0;
+}
+ .panel.active {
+   display: block;
+   opacity: 1;
+   max-height: 30rem;
+   margin-bottom: 1rem;
+}
+</style>
+
+<body>
+  <div class="accordion"><h3>Do you have experience in my sector?</h3></div>
+  <div class="panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem odit totam nobis fuga explicabo molestias, eveniet ipsa blanditiis laboriosam iure. Vel libero dignissimos voluptates blanditiis dolor? Consequatur dolore, quidem vitae.</div>
+  <div class="accordion"><h3>Do you have experience in my sector?</h3></div>
+  <div class="panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem odit totam nobis fuga explicabo molestias, eveniet ipsa blanditiis laboriosam iure. Vel libero dignissimos voluptates blanditiis dolor? Consequatur dolore, quidem vitae.</div>
+  <div class="accordion"><h3>Do you have experience in my sector?</h3></div>
+  <div class="panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem odit totam nobis fuga explicabo molestias, eveniet ipsa blanditiis laboriosam iure. Vel libero dignissimos voluptates blanditiis dolor? Consequatur dolore, quidem vitae.</div>
+</body>
+ 
+
+<script>
+   $accord = $('.accordion');
+    if($accord.length) {
+        $( ".accordion").click(function(event) {
+            $(this).next().toggleClass('active');
+        });
+    }
+</script>
+
