@@ -1,5 +1,6 @@
 <!-- Referenced from motc.org -->
 <!-- Use autopause=0 to allow 2 videos to pause and not have the other pause -->
+<!-- need to use  'node_modules/vimeo-froogaloop/froogaloop.js', with it -->
 
 <div class="home-primary-video">
   <div class="container">
