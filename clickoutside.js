@@ -25,3 +25,15 @@ $(document).on("click", function(e) {
     $($searchField).removeClass("extend");
   }
 });
+
+// Another way, this first part turns on search element
+// Then when clickign outside (document) you remove the active classs
+
+$sbtn.click(function(event) {
+  $(this).closest('.site-header').next().toggleClass('active');
+  event.stopPropagation(); // < -- Need this
+});
+
+$(document).click(function() {
+    $('.searchbutton').removeClass('active');
+});
