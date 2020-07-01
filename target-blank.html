@@ -1,0 +1,46 @@
+<!-- This is for when you need a pop up message when clicking on a link that goes to an outside page -->
+
+<script>
+    targetBlinks = function() {
+
+    $('a[target="_blank"]').click(function( event ) {
+      event.preventDefault();
+      event.stopPropagation();
+      var link = this.href;
+
+      $('.alert-box').addClass('active');
+      $('.alert-box .button').click(function(event) {
+          window.open(link).attr('href');
+      });
+
+    });
+
+    $('.alert-box .button').click(function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      $(this).closest('.alert-box').removeClass('active');
+    });
+
+    $('.alert-box .close').click(function(event) {
+      event.preventDefault();
+      $(this).closest('.alert-box').removeClass('active');
+    });
+
+   
+  }
+</script>
+
+<html>
+<div class="alert-box">
+  <button class="close">X</button>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h4>You are about to leave the West Town Bank Website</h4>
+        <p><strong>Disclaimer:</strong> This link will take you to a website outside of the West Town Bank website. The new site may offer a different privacy policy and level of security. West Town Bank is not responsible for the products or services that are offered or expressed on other websites.</p>
+        <button class="button button-primary dark">Yes, I understand. Please Continue.</button>
+      </div>
+    </div>
+  </div>
+</div>
+</html>
