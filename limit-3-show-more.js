@@ -58,6 +58,11 @@ limitItems = function() {
 
     // HTML CODE
 
+  <div style="text-align: right;">
+    <button class="show-all bposts">show all</button>
+    <button class="show-less bposts">show less</button>
+  </div>
+
    <section class="people-gallery">
     <div class="row limit">
       <div class="col-lg-4 pb2">
