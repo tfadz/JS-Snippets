@@ -1,0 +1,66 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" href="icon.png">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js" ></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+	<script src="https://player.vimeo.com/api/player.js"></script>
+	<script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
+	<script src="https://remy.github.io/jquery.inview/jquery.inview.js"></script>
+
+	<style>
+		body, html {
+			margin: 0;
+			paddin: 0;
+			box-sizing: border-box;
+			font-family: Arial, san-serif;
+			font-size: 1rem;
+		}
+
+		.placeholder {
+			height: 900px;
+			display: block;
+			background: blue;
+		}
+
+		.red {
+			border: 1px solid red;
+		}
+	</style>
+</head>
+<body>
+
+<section class="container">
+<div class="placeholder"></div>
+	<section class="vimeo-block">
+		<div class="vimeo">
+			<iframe title="&amp;quot;Gangler's &amp;quot; Wilderness Adventure&amp;quot; Movie 2018" src="https://player.vimeo.com/video/289357037?dnt=1&amp;app_id=122963&amp;playsinline=1&amp;controls=0&amp;hd=1&amp;autoplay=0&amp;autohide=1&amp;background=1&amp;loop=1&amp;byline=0&amp;title=0&amp;muted=1" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" id="vimeo-player" webkitallowfullscreen="" mozallowfullscreen=""></iframe>
+		</div>
+	</section>
+</section>
+
+<script>
+	jQuery(function($) {
+
+		$('.vimeo-block').bind('inview', function(event, visible) {
+
+			var iframe = $('#vimeo-player')[0];
+			var player = $f(iframe);
+
+			if (visible == true) {
+				player.api('play');
+			}
+		});
+	});
+
+
+</script>
+
+</body>
+</html>
