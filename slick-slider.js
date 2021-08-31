@@ -1,3 +1,5 @@
+  // This adds a number to each slide and ignores the slick cloned.
+
 sliderCounter = function() {
     var counter = 1;
     $('.videoIntro-carousel .slick-slide').each(function () {
@@ -8,4 +10,6 @@ sliderCounter = function() {
     });
   }
 
-  // This adds a number to each slide and ignores the slick cloned.
+
+  // This moves slick dots into another div
+  $('.slick-dots').detach().appendTo('.slick-slider-dots');
