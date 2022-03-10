@@ -1,0 +1,193 @@
+body {
+  background: #f9f9f9;
+  margin: 1rem 0;
+  padding: 1rem;
+  font-family: Helvetica;
+}
+
+.controls {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+button {
+  border-radius: 3px;
+  display: inline-block;
+  border: none;
+  letter-spacing: 0.03em;
+  margin-bottom: 2rem;
+  margin-right: 1rem;
+  width: auto;
+  padding: .5rem 1rem;
+  color: #333;
+  background: white;
+  border: 1px solid #CCC;
+}
+
+button:hover {
+  border: 1px solid gray;
+  cursor: pointer;
+  background: #F2F2F2;
+  color: gray;
+}
+.button-clear:hover {
+  background: black;
+  color: white;
+  border: 1px solid black;
+}
+
+.button-compare {
+  background: #C1F067;
+  color: black;
+  display: none;
+}
+
+.button-compare:hover {
+  background: #C1F067;
+  border: 1px solid black;
+  color: black;
+}
+.button-compare.inactive {
+  background: #CCC;
+  color: #EEE;
+  pointer-events: none;
+}
+
+.grid {
+  max-width: 1200px;
+  margin: 1rem auto;
+}
+.row {
+  background: black;
+  display: flex;
+  padding: 1rem .5rem;
+}
+
+.row:first-child{
+  padding-top: 1.5rem;
+}
+.row:last-child {
+  padding-bottom: 1.5rem;
+}
+
+article {
+  display: block;
+  background: white;
+  position: relative;
+  color: black;
+  width: 33%;
+  padding: 2.25rem 0;
+  text-align: center;
+  margin: 0 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  z-index: 99;
+}
+
+article h1 {
+  letter-spacing: 0.07em;
+  line-height: 1.2;
+  font-weight: 300;
+}
+
+article.notsame:not(.active) {
+  opacity: .2;
+  pointer-events: none;
+}
+
+article.active {
+  background: #E31913;
+  color: white;
+  opacity: 1;
+  transition: .3s ease;
+}
+
+article.active:hover {
+  background: #ce150f;
+  color: white;
+}
+
+article.active.compare:before {
+  content: "\f14a";
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  font-family: FontAwesome;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #C1F067; 
+}
+
+article.compare:before {
+  content: "\f14a";
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-family: FontAwesome;
+  font-weight: 900;
+  color: #90EE90;
+}
+
+article:hover {
+  cursor: pointer;
+  background: #999;
+  color: white;
+}
+
+connection {
+  border: 3px dashed white;
+  border-radius: 50px;
+}
+
+.modal {
+  padding: .75rem;
+  position: fixed;
+  width: 700px;
+  height: 400px;
+  background: rgba(255, 255, 255, .95);
+	backdrop-filter: blur(10px);
+  border: 3px solid black;
+  display: none;
+  z-index: 999;
+  top: 10%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.modal.active {
+  display: flex;
+  align-items: center;
+}
+
+.modal article {
+  width: 100%;
+  background: #CCC;
+  color: black;
+  height: auto;
+  margin: 0 .5rem;
+  height: 250px;
+}
+
+.modal article h1 {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.modal article.compare:before {
+  content: none;
+}
+
+.modal article:hover {
+  pointer-events: none;
+  background: #CCC;
+  color: black;
+}
+
+
+
+
+
+
